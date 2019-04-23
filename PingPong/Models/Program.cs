@@ -1,14 +1,16 @@
 using System;
 
-namespace PingPong
+namespace SharedProgram
 {
     public class UserInterface
     {
         static void Main()
         {
             Console.WriteLine("Please enter a number: ");
-            int userInput = Console.ReadLine();
-            PingPongGen(userInput);
+            string stringUserInput = Console.ReadLine();
+            int userInput = int.Parse(stringUserInput);
+            PingPong pingPonger = new PingPong();
+            pingPonger.PingPongGenerator(userInput);
         }
     }
 }

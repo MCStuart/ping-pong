@@ -1,13 +1,11 @@
 using System;
 
-namespace PingPong
+namespace SharedProgram
 {
     public class PingPong
     {
-        static void Main() {
-            Console.WriteLine("Please enter a number: ");
-            string stringUserInput = Console.ReadLine();
-            int userInput = int.Parse(stringUserInput);
+        public void PingPongGenerator(int userInput)
+        {
             for (int i = 1; i <= userInput; i++)
             {
                 if (i % 3 == 0 && i % 5 == 0)
